@@ -1,4 +1,4 @@
-## About Timely Sheets
+# About Timely Sheets
 
 Timely Sheets is a Time and Attendance platform designed to help HR in managing employee attendance life cycle from time tracking to scheduling and understand the true value of their Human Resources.
 
@@ -15,9 +15,9 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 ![Timely Sheets - Dashboard screenshot](https://i.postimg.cc/FzvVD4Qg/timely-sheets-attendance-management-system-dashboard.png)
 ![Timely Sheets - Reports screenshot](https://i.postimg.cc/8k31JzN6/timely-sheets-attendance-management-system-reports.png)
 
-# Getting started
+## Getting started
 
-## Installation
+### Installation
 
 1. Download or clone the repo to your desktop
 2. Change directory `cd my-app`
