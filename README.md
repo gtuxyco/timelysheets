@@ -31,7 +31,7 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 
 ## Supporting Timely Sheets
 
-We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please do [One-time donation addressed to [mr.brianluna@gmail.com](mailto:mr.brianluna@gmail.com) via PayPal.](https://paypal.com)
+We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please do [One-time donation addressed to [mr.brianluna@gmail.com (mailto:mr.brianluna@gmail.com) via PayPal.]
 
 ## Contributing
 
