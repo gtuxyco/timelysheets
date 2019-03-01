@@ -29,6 +29,13 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 8. Run `php artisan serve` to open live application.
 9. Login using sample account username `manager@example.com`, password `demo12345`
 
+### System Requirements
+
+1. `PHP` >= 7.1.3
+2. `MySQL 5.x` or newer versions
+3. `Nginx` or `Apache` (recommended) http server
+4. Required PHP extensions: `OpenSSL`, `PDO`, `Mbstring`, `Tokenizer`, `Ctype`, `JSON`
+
 ## Supporting Timely Sheets
 
 We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please contact me using the contact option below.
