@@ -31,14 +31,11 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 
 ## Supporting Timely Sheets
 
-We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please visit the Timely Sheets [Patreon page](https://patreon.com/timelysheets).
-
-- [One-time donation via PayPal.](https://paypal.com)
-- [Become a backer or sponsor via Open Collective](https://opencollective.com/timelysheets).
+We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please do [One-time donation addressed to [mr.brianluna@gmail.com](mailto:mr.brianluna@gmail.com) via PayPal.](https://paypal.com)
 
 ## Contributing
 
-Thank you for considering contributing to the Timely Sheets! The contribution guide can be found in the [Timely Sheets Documentation](https://timelysheets.com/docs/contributions).
+Thank you for considering contributing to the Timely Sheets!
 
 ## Security Vulnerabilities
 
