@@ -43,7 +43,7 @@ If you discover a security vulnerability within Timely Sheets, please send an e-
 
 ## Contact
 
-- [Messenger](https://m.me/brianluna.me)
+- [Messenger](https://m.me/brianlunaprogrammer)
 
 ## License
 
