@@ -27,6 +27,7 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 6. Update database config `DB_DATABASE=`, `DB_USERNAME=`, `DB_PASSWORD=`, and `DB_HOST=`
 7. Run `php artisan key:generate`
 8. Run `php artisan serve` to open live application.
+9. Login using sample account username `manager@example.com`, password `demo12345`
 
 ## Supporting Timely Sheets
 
