@@ -13,7 +13,7 @@ Features:
 Timely Sheets is accessible, powerful, and provides tools required for companies.
 
 
-## Timely Sheets
+## Timely Sheets Sponsors
 
 We would like to extend our thanks to the following sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please visit the Timely Sheets [Patreon page](https://patreon.com/timelysheets).
 
