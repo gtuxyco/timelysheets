@@ -44,7 +44,7 @@ We would like to extend our thanks to the sponsors for funding Timely Sheets dev
 
 Thank you for considering contributing to the Timely Sheets!
 
-### Get Paid Support and Fund Timely Sheets development
+### Get paid support and fund Timely Sheets development
 
 Get paid support subscription starting at `$29` for 6 months or extend up to 12 months for only `$50`.
 
