@@ -44,7 +44,7 @@ We would like to extend our thanks to the sponsors for funding Timely Sheets dev
 
 Thank you for considering contributing to the Timely Sheets!
 
-## Get Paid Support and Fund the Development of Timely Sheets App!
+### Get Paid Support and Fund Timely Sheets development
 
 Get paid support subscription starting at `$29` for 6 months or extend up to 12 months for only `$50`.
 
@@ -55,7 +55,7 @@ Get paid support subscription starting at `$29` for 6 months or extend up to 12 
 3. Help with included 3rd party assets.
 4. Help with customization and installation.
 
-For every paid subscription, you are already contributing to fund the Development of Timely Sheets App. Please contact me using the contact option below.
+For every paid subscription, you are already contributing to fund Timely Sheets development. Please contact me using the contact option below.
 
 ## Security Vulnerabilities
 
