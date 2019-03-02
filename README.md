@@ -55,6 +55,7 @@ Get paid support subscription starting at `$29` for 6 months or extend up to 12 
 3. Help with included 3rd party assets.
 4. Help with customization and installation.
 
+For every paid subscription, you are already contributing to fund the Development of Timely Sheets App. Please contact me using the contact option below.
 
 ## Security Vulnerabilities
 
