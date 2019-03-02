@@ -38,7 +38,7 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 
 ## Supporting Timely Sheets
 
-We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please visit the Timely Sheets [Patreon page](page](https://patreon.com/brianluna).
+We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please visit the Timely Sheets [Patreon page](page](https://patreon.com/brianluna)
 
 ## Contributing
 
