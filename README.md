@@ -54,12 +54,10 @@ Get paid support subscription starting at `$29` for 6 months or extend up to 12 
 1. Availability of the developer to answer questions.
 2. Get assistance with reported bugs and issues.
 3. Help with included 3rd party assets.
-4. Help with customization and installation.
+4. Get assistance with customization and installation.
+5. Suggest feature and I will do my best to develop.
 
 For every paid subscription, you are already contributing to fund Timely Sheets development. Please contact me using the contact option below or please visit the Timely Sheets [Patreon page](https://patreon.com/brianluna)
-
-
-
 
 
 ## Security Vulnerabilities
