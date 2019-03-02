@@ -2,7 +2,7 @@
 
 Timely Sheets is an Attendance Management System designed to help HR in managing employee attendance life cycle from time tracking to scheduling and understand the true value of their Human Resources.
 
-Features:
+Benefits:
 
 - Engage your people everywhere on their preferred devices.
 - Take action and respond to changes on the fly.
@@ -19,12 +19,12 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 
 ### Installation
 
-1. Download or clone the repo to your desktop
+1. Download or clone the repo to your desktop.
 2. Change directory `cd my-app`
 3. Run `composer update`
 4. Import `my-app/database/database.sql` to your MySQL or MariaDB Server, create a user and grant all rights to the imported `DB`
 5. Rename `.env.example` to `.env`
-6. Update database config `DB_DATABASE=`, `DB_USERNAME=`, `DB_PASSWORD=`, and `DB_HOST=` in .env file
+6. Update database config `DB_DATABASE=`, `DB_USERNAME=`, `DB_PASSWORD=`, and `DB_HOST=` in .env file.
 7. Run `php artisan key:generate`
 8. Run `php artisan serve` to open live application.
 9. Login using sample account username `manager@example.com`, password `demo12345`
@@ -32,14 +32,13 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 ### System Requirements
 
 1. `PHP` >= 7.1.3
-2. `MySQL 5.x` or newer versions
+2. `MySQL` 5.x or newer versions
 3. `Nginx` or `Apache` (recommended) http server
 4. Required PHP extensions: `OpenSSL`, `PDO`, `Mbstring`, `Tokenizer`, `Ctype`, `JSON`
 
 ## Supporting Timely Sheets
 
 We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please visit the Timely Sheets [Patreon page](https://patreon.com/brianluna)
-
 
 ## Contributing
 
@@ -58,7 +57,6 @@ Get paid support subscription starting at `$29` for 6 months or extend up to 12 
 5. Suggest feature and I will do my best to develop.
 
 For every paid subscription, you are already contributing to fund Timely Sheets development. Please contact me using the contact option below or please visit the Timely Sheets [Patreon page](https://patreon.com/brianluna)
-
 
 ## Security Vulnerabilities
 
