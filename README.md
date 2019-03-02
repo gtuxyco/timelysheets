@@ -44,6 +44,18 @@ We would like to extend our thanks to the sponsors for funding Timely Sheets dev
 
 Thank you for considering contributing to the Timely Sheets!
 
+## Get Paid Support and Fund the Development of Timely Sheets App!
+
+Get paid support subscription starting at `$29` for 6 months or extend up to 12 months for only `$50`.
+
+### What's included in paid support
+
+1. Availability of the developer to answer questions.
+2. Get assistance with reported bugs and issues.
+3. Help with included 3rd party assets.
+4. Help with customization and installation.
+
+
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within Timely Sheets, please send an e-mail to Brian Luna via [mr.brianluna@gmail.com](mailto:mr.brianluna@gmail.com). All security vulnerabilities will be promptly addressed.
