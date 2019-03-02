@@ -1,6 +1,6 @@
 # About Timely Sheets
 
-Timely Sheets is a Time and Attendance platform designed to help HR in managing employee attendance life cycle from time tracking to scheduling and understand the true value of their Human Resources.
+Timely Sheets is an Attendance Management System designed to help HR in managing employee attendance life cycle from time tracking to scheduling and understand the true value of their Human Resources.
 
 Features:
 
