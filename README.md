@@ -36,6 +36,8 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 3. `Nginx` or `Apache` (recommended) http server
 4. Required PHP extensions: `OpenSSL`, `PDO`, `Mbstring`, `Tokenizer`, `Ctype`, `JSON`
 
+If you are running on local development we recommend using `AMPPS` stack which has all the system requirements [Download AMPPS](https://www.ampps.com/downloads) available in Windows, Mac, Linux Installers.
+
 ## Supporting Timely Sheets
 
 We would like to extend our thanks to the sponsors for funding Timely Sheets development. If you are interested in becoming a sponsor, please visit the Timely Sheets [Patreon page](https://patreon.com/brianluna)
