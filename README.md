@@ -14,6 +14,7 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 
 ![Timely Sheets - Dashboard screenshot](https://i.postimg.cc/FzvVD4Qg/timely-sheets-attendance-management-system-dashboard.png)
 ![Timely Sheets - Reports screenshot](https://i.postimg.cc/8k31JzN6/timely-sheets-attendance-management-system-reports.png)
+![Timely Sheets - Reports Organization Profile](https://i.postimg.cc/RCwwfyKB/timelysheets-reports-organization-profile.png)
 
 ## Getting started
 
