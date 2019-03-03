@@ -10,6 +10,22 @@ Benefits:
 - Make better business decisions based on contextual insights.
 - Get a full view of talent, attendance, and schedule with Timely Sheets software.
 
+Features:
+
+Employee Management: Managing employee information is now easier and less time consuming with employee and manager self-service.
+
+Time Tracking and Attendance: Manage full worker attendance lifecycle everywhere on your preferred devices, take action and respond to changes on the fly.
+
+Smart Web Clock-In/Clock-Out: Automate time and attendance detection of total hours work, late arrivals and early departures. Ge rid of double time entry and inaccurate clock-ins or clock-outs.
+
+Scheduling: Easily manage schedules, and integrate schedule to attendance detect punctual clock-in/clock-out, late arrivals and early departures in real time.
+
+Leave Management: Use one version of a single Leave management system. Easily approve leave and manage employee leave request across your entire organization.
+
+Manager Dashboard: Get a full view of talent, recent attendances, recent leaves of absence with Smart Timesheet manager dashboard.
+
+Reporting: Make better business decisions based on contextual insights. Smart Timesheet reports generate powerful insights to your company demographics.
+
 Timely Sheets is accessible, powerful, and provides tools required for companies.
 
 ## Getting started
