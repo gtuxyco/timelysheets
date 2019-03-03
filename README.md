@@ -12,10 +12,6 @@ Benefits:
 
 Timely Sheets is accessible, powerful, and provides tools required for companies.
 
-![Timely Sheets - Dashboard screenshot](https://i.postimg.cc/FzvVD4Qg/timely-sheets-attendance-management-system-dashboard.png)
-![Timely Sheets - Reports screenshot](https://i.postimg.cc/8k31JzN6/timely-sheets-attendance-management-system-reports.png)
-![Timely Sheets - Reports Organization Profile](https://i.postimg.cc/RCwwfyKB/timelysheets-reports-organization-profile.png)
-
 ## Getting started
 
 ### Installation
@@ -38,6 +34,35 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 4. Required PHP extensions: `OpenSSL`, `PDO`, `Mbstring`, `Tokenizer`, `Ctype`, `JSON`
 
 If you are running on local development, we recommend using `AMPPS` stack which has all the system requirements [Download AMPPS](https://www.ampps.com/downloads) available in Windows, Mac, Linux Installers.
+
+## Screenshots
+
+Timely Sheets is a user-friendly, intuitive Time and Attendance Management System that provides smoothly integrated essential HR Time and Attendance functionality, Talent Management, Leave Management, Schedule Management, Time tracking, People Analytics, Reporting and more... 
+
+#### Manager Dashboard
+![Timely Sheets - Manager Dashboard](https://i.postimg.cc/B6wjx5pR/manager-dashboard.png)
+
+#### Manage Employees
+![Timely Sheets - Manage Employees](https://i.postimg.cc/MT4Gc6KS/manager-employees.png)
+
+#### Manage Attendances
+![Timely Sheets - Manage Attendances](https://i.postimg.cc/VNKB5Vr8/manager-attendance.png)
+
+#### Manage Schedules
+![Timely Sheets - Manage Schedules](https://i.postimg.cc/HkcVbvhm/manager-schedules.png)
+
+#### Manage Leaves of Absence
+![Timely Sheets - Manage Leave](https://i.postimg.cc/WpF6bSsB/manager-leaves.png)
+
+#### View and Export Reports
+![Timely Sheets - Reports](https://i.postimg.cc/sx7hP6X1/manager-reports.png)
+
+#### People Analytics
+![Timely Sheets - People Analytics](https://i.postimg.cc/s2bxnYbW/manager-reports-organization-profile.png)
+
+#### Employee Dashboard
+![Timely Sheets - Employee Dashboard](https://i.postimg.cc/8PT5nPXZ/employee-my-dashboard.png)
+
 
 ## Supporting Timely Sheets
 
