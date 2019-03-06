@@ -19,7 +19,7 @@ Timely Sheets is accessible, powerful, and provides tools required for companies
 
 1. Download or clone the repo to your desktop.
 2. Change directory `cd my-app`
-3. Run `composer update`
+3. Run `composer install`
 4. Import `my-app/database/database.sql` to your MySQL or MariaDB Server, create a user and grant all rights to the imported `DB`
 5. Rename `.env.example` to `.env`
 6. Update database config `DB_DATABASE=`, `DB_USERNAME=`, `DB_PASSWORD=`, and `DB_HOST=` in .env file.
