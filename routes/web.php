@@ -19,18 +19,18 @@
 * Copyright 2019 Brian Luna
 * Website: https://github.com/brianluna/timelysheets
 */
-
+/*
+|--------------------------------------------------------------------------
+| Universal SmartClock 
+|--------------------------------------------------------------------------
+*/
+Route::get('clock', 'ClockController@clock');
+Route::post('attendance/add', 'ClockController@add'); 
+		
 Route::group(['middleware' => 'auth'], function () {
 
 	Route::group(['middleware' => 'checkstatus'], function () {
-		/*
-		|--------------------------------------------------------------------------
-		| Universal SmartClock 
-		|--------------------------------------------------------------------------
-		*/
-		Route::get('clock', 'ClockController@clock');
-		Route::post('attendance/add', 'ClockController@add'); 
-		
+
 
 		Route::group(['middleware' => 'admin'], function () {
 			/*
