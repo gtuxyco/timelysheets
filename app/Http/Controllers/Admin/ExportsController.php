@@ -27,7 +27,7 @@ class ExportsController extends Controller
 		$c = table::company()->get();
 
 		Storage::delete('company.csv');
-		Storage::put('company.csv', '', 'private');
+		Storage::put('company.csv', '' );
 
 		foreach ($c as $d) {
 		    Storage::prepend('company.csv', $d->id .','. $d->company);
@@ -46,7 +46,7 @@ class ExportsController extends Controller
 		$d = table::department()->get();
 
 		Storage::delete('department.csv');
-		Storage::put('department.csv', '', 'private');
+		Storage::put('department.csv', '' );
 
 		foreach ($d as $i) {
 		    Storage::prepend('department.csv', $i->id .','. $i->department);
@@ -66,7 +66,7 @@ class ExportsController extends Controller
 		$j = table::jobtitle()->get();
 
 		Storage::delete('jobtitle.csv');
-		Storage::put('jobtitle.csv', '', 'private');
+		Storage::put('jobtitle.csv', '' );
 
 		foreach ($j as $d) {
 		    Storage::prepend('jobtitle.csv', $d->id .','. $d->jobtitle .','. $d->dept_code);
@@ -85,7 +85,7 @@ class ExportsController extends Controller
 		$l = table::leavetypes()->get();
 
 		Storage::delete('leavetypes.csv');
-		Storage::put('leavetypes.csv', '', 'private');
+		Storage::put('leavetypes.csv', '' );
 
 		foreach ($l as $d) {
 		    Storage::prepend('leavetypes.csv', $d->id .','. $d->leavetype .','. $d->limit .','. $d->percalendar);
@@ -103,7 +103,7 @@ class ExportsController extends Controller
 		$p = table::people()->get();
 
 		Storage::delete('employee-list.csv');
-		Storage::put('employee-list.csv', '', 'private');
+		Storage::put('employee-list.csv', '' );
 
 		foreach ($p as $d) {
 		    Storage::prepend('employee-list.csv', $d->id .','. $d->lastname.' '.$d->firstname.' '.$d->mi .','. $d->age .','. $d->gender .','. $d->civilstatus .','. $d->mobileno .','. $d->emailaddress .','. $d->employmenttype .','. $d->employmentstatus);
@@ -126,7 +126,7 @@ class ExportsController extends Controller
 			
 			$data = table::attendance()->get();
 			Storage::delete('attendance-report.csv');
-			Storage::put('attendance-report.csv', '', 'private');
+			Storage::put('attendance-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('attendance-report.csv', $d->id .','. $d->idno .','. $d->date .','. '"'.$d->employee.'"' .','. $d->timein .','. $d->timeout .','. $d->totalhours .','. $d->status_timein .','. $d->status_timeout);
@@ -142,7 +142,7 @@ class ExportsController extends Controller
 			
 			$data = table::attendance()->where('idno', $id)->whereBetween('date', [$datefrom, $dateto])->get();
 			Storage::delete('attendance-report.csv');
-			Storage::put('attendance-report.csv', '', 'private');
+			Storage::put('attendance-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('attendance-report.csv', $d->id .','. $d->idno .','. $d->date .','. '"'.$d->employee.'"' .','. $d->timein .','. $d->timeout .','. $d->totalhours .','. $d->status_timein .','. $d->status_timeout);
@@ -159,7 +159,7 @@ class ExportsController extends Controller
 			$data = table::attendance()->where('idno', $id)->get();
 
 			Storage::delete('attendance-report.csv');
-			Storage::put('attendance-report.csv', '', 'private');
+			Storage::put('attendance-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('attendance-report.csv', $d->id .','. $d->idno .','. $d->date .','. '"'.$d->employee.'"' .','. $d->timein .','. $d->timeout .','. $d->totalhours .','. $d->status_timein .','. $d->status_timeout);
@@ -176,7 +176,7 @@ class ExportsController extends Controller
 			$data = table::attendance()->whereBetween('date', [$datefrom, $dateto])->get();
 
 			Storage::delete('attendance-report.csv');
-			Storage::put('attendance-report.csv', '', 'private');
+			Storage::put('attendance-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('attendance-report.csv', $d->id .','. $d->idno .','. $d->date .','. '"'.$d->employee.'"' .','. $d->timein .','. $d->timeout .','. $d->totalhours .','. $d->status_timein .','. $d->status_timeout);
@@ -203,7 +203,7 @@ class ExportsController extends Controller
 			
 			$data = table::leaves()->get();
 			Storage::delete('leaves-report.csv');
-			Storage::put('leaves-report.csv', '', 'private');
+			Storage::put('leaves-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('leaves-report.csv', $d->id .','. $d->idno .','. '"'.$d->employee.'"' .','. $d->type .','. $d->leavefrom .','. $d->leaveto .','. $d->reason .','. $d->status);
@@ -219,7 +219,7 @@ class ExportsController extends Controller
 			
 			$data = table::leaves()->where('idno', $id)->whereBetween('leavefrom', [$datefrom, $dateto])->get();
 			Storage::delete('leaves-report.csv');
-			Storage::put('leaves-report.csv', '', 'private');
+			Storage::put('leaves-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('leaves-report.csv', $d->id .','. $d->idno .','. '"'.$d->employee.'"' .','. $d->type .','. $d->leavefrom .','. $d->leaveto .','. $d->reason .','. $d->status);
@@ -235,7 +235,7 @@ class ExportsController extends Controller
 		 	
 			$data = table::leaves()->where('idno', $id)->get();
 			Storage::delete('leaves-report.csv');
-			Storage::put('leaves-report.csv', '', 'private');
+			Storage::put('leaves-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('leaves-report.csv', $d->id .','. $d->idno .','. '"'.$d->employee.'"' .','. $d->type .','. $d->leavefrom .','. $d->leaveto .','. $d->reason .','. $d->status);
@@ -251,7 +251,7 @@ class ExportsController extends Controller
 
 			$data = table::leaves()->whereBetween('leavefrom', [$datefrom, $dateto])->get();
 			Storage::delete('leaves-report.csv');
-			Storage::put('leaves-report.csv', '', 'private');
+			Storage::put('leaves-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('leaves-report.csv', $d->id .','. $d->idno .','. '"'.$d->employee.'"' .','. $d->type .','. $d->leavefrom .','. $d->leaveto .','. $d->reason .','. $d->status);
@@ -274,7 +274,7 @@ class ExportsController extends Controller
 			->get();
 
 		Storage::delete('employee-birthdays.csv');
-		Storage::put('employee-birthdays.csv', '', 'private');
+		Storage::put('employee-birthdays.csv', '' );
 
 		foreach ($c as $d) {
 		    Storage::prepend('employee-birthdays.csv', $d->idno .','. $d->lastname.' '.$d->firstname.' '.$d->mi .','. $d->department .','. $d->jobposition .','. $d->birthday .','. $d->mobileno);
@@ -292,7 +292,7 @@ class ExportsController extends Controller
 		$u = table::users()->get();
 
 		Storage::delete('employee-accounts.csv');
-		Storage::put('employee-accounts.csv', '', 'private');
+		Storage::put('employee-accounts.csv', '' );
 
 		foreach ($u as $a) {
 			if($a->acc_type == 2) {
@@ -317,7 +317,7 @@ class ExportsController extends Controller
 		if ($id == null) {
 			$data = table::schedules()->get();
 			Storage::delete('schedule-report.csv');
-			Storage::put('schedule-report.csv', '', 'private');
+			Storage::put('schedule-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('schedule-report.csv', $d->idno .',"'. $d->employee .'",'. $d->intime .','. '"'.$d->outime.'"' .','. $d->datefrom .','. $d->dateto .','. $d->hours .',"'. $d->restday .'",'. $d->archive);
@@ -333,7 +333,7 @@ class ExportsController extends Controller
 			
 			$data = table::schedules()->where('idno', $id)->get();
 			Storage::delete('schedule-report.csv');
-			Storage::put('schedule-report.csv', '', 'private');
+			Storage::put('schedule-report.csv', '' );
 
 			foreach ($data as $d) {
 				Storage::prepend('schedule-report.csv', $d->idno .',"'. $d->employee .'",'. $d->intime .','. '"'.$d->outime.'"' .','. $d->datefrom .','. $d->dateto .','. $d->hours .',"'. $d->restday .'",'. $d->archive);
