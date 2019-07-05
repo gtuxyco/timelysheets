@@ -77,7 +77,7 @@ class ClockController extends Controller
             $has = table::attendance()->where([['idno', $idno],['date', $date]])->exists();
 
             if ($has == 1) {
-                $hti = table::attendance()->where([['idno', $idno],['date', $date]])->value('timein');
+                $hti = table::attendance()->where([['idno', $idno],['date', $date]])->whereNull('timeout')->value('timein');
                 $hti = date('h:i A', strtotime($hti));
                 return response()->json([
                     "employee" => $employee,
@@ -141,8 +141,8 @@ class ClockController extends Controller
         }
   
         if ($type == 'Time Out') {
-            $timeIN = table::attendance()->where('idno', $idno)->where('date', $date)->value('timein');
-            $hasout = table::attendance()->where([['idno', $idno],['date', $date]])->value('timeout');
+            $timeIN = table::attendance()->where('idno', $idno)->where('date', $date)->whereNull('timeout')->value('timein');
+            $hasout = table::attendance()->where([['idno', $idno],['date', $date]])->whereNull('timeout')->value('timeout');
 
             $timeOUT = date("Y-m-d h:i:s A", strtotime($date." ".$time));
 
@@ -183,7 +183,7 @@ class ClockController extends Controller
                 $tm = floor(($time1->diffInMinutes($time2) - (60 * $th)));
                 $totalhour = $th.".".$tm;
 
-                table::attendance()->where('idno', $idno)->where('date', $date)->update(array(
+                table::attendance()->where('idno', $idno)->where('date', $date)->whereNull('timeout')->update(array(
                     'timeout' => $timeOUT,
                     'totalhours' => $totalhour,
                     'status_timeout' => $status_out)
