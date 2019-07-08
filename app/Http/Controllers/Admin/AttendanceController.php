@@ -9,7 +9,6 @@
 */
 namespace App\Http\Controllers\admin;
 use DB;
-use Carbon\Carbon;
 use App\Classes\table;
 use App\Classes\permission;
 use App\Http\Requests;
@@ -101,17 +100,16 @@ class AttendanceController extends Controller
             }
         }
 
-        $time1 = Carbon::createFromFormat("Y-m-d h:i:s A", $timeIN); 
-        $time2 = Carbon::createFromFormat("Y-m-d h:i:s A", $timeOUT); 
-        $th = $time1->diffInHours($time2);
-        $tm = floor(($time1->diffInMinutes($time2) - (60 * $th)));
-        $totalhour = $th.".".$tm;
+        $time1 = date_create($timeIN); 
+        $time2 = date_create($timeOUT); 
+        $diff = date_diff($time1,$time2);
+        $totaltime = $diff->format('%h.%i');
 
         table::attendance()->where('id', $id)->update([
             'timein' => $timeIN,
             'timeout' => $timeOUT,
             'reason' => $reason, 
-            'totalhours' => $totalhour,
+            'totalhours' => $totaltime,
             'status_timein' => $status_in,
             'status_timeout' => $status_out,
         ]);

@@ -66,7 +66,7 @@
                                     <td>{{ $v->employee }}</td>
                                     <td>@php echo e(date('h:i:s A', strtotime($v->timein))) @endphp</td>
                                     <td>@php echo e(date('h:i:s A', strtotime($v->timeout))) @endphp</td>
-                                    <td>{{ $v->totalhours }}</td>
+                                    <td>@php echo e(date('H.i', strtotime($v->totalhours))) @endphp</td>
                                 </tr>
                             @endforeach
                             @endisset

@@ -9,7 +9,6 @@
 */
 namespace App\Http\Controllers;
 use DB;
-use Carbon\Carbon;
 use App\Classes\table;
 use App\Classes\permission;
 use App\Http\Requests;
@@ -74,11 +73,10 @@ class ClockController extends Controller
         $employee = mb_strtoupper($lastname.', '.$firstname.' '.$mi);
 
         if ($type == 'Time In') {
-            $has = table::attendance()->where([['idno', $idno],['date', $date]])->exists();
+            $has = table::attendance()->where([['idno', $idno],['date', $date]])->whereNull('timeout')->value('timein');
 
-            if ($has == 1) {
-                $hti = table::attendance()->where([['idno', $idno],['date', $date]])->whereNull('timeout')->value('timein');
-                $hti = date('h:i A', strtotime($hti));
+            if ($has != null) {
+                $hti = date('h:i A', strtotime($has));
                 return response()->json([
                     "employee" => $employee,
                     "gender" => $gender,
@@ -142,9 +140,17 @@ class ClockController extends Controller
   
         if ($type == 'Time Out') {
             $timeIN = table::attendance()->where('idno', $idno)->where('date', $date)->whereNull('timeout')->value('timein');
-            $hasout = table::attendance()->where([['idno', $idno],['date', $date]])->whereNull('timeout')->value('timeout');
-
+            $hasout = table::attendance()->where([['idno', $idno],['date', $date]])->orderBy('id', 'desc')->value('timeout');
             $timeOUT = date("Y-m-d h:i:s A", strtotime($date." ".$time));
+            
+            if ($hasout!= null) {
+                $hto = date('h:i A', strtotime($hasout));
+                return response()->json([
+                    "employee" => $employee,
+                    "gender" => $gender,
+                    "civilstatus" => $civilstatus,
+                    "error" => "You already Time Out today at ".$hto,
+                ]);
 
             if($timeIN == null) {
                 return response()->json([
@@ -152,15 +158,7 @@ class ClockController extends Controller
                 ]);
             } 
 
-            if ($hasout != null) {
-                $hto = table::attendance()->where([['idno', $idno],['date', $date]])->value('timeout');
-                $hto = date('h:i A', strtotime($hto));
-                return response()->json([
-                    "employee" => $employee,
-                    "gender" => $gender,
-                    "civilstatus" => $civilstatus,
-                    "error" => "You already Time Out today at ".$hto,
-                ]);
+
 
             } else {
 
@@ -177,15 +175,15 @@ class ClockController extends Controller
                     }
                 }
 
-                $time1 = Carbon::createFromFormat("Y-m-d h:i:s A", $timeIN); 
-                $time2 = Carbon::createFromFormat("Y-m-d h:i:s A", $timeOUT); 
-                $th = $time1->diffInHours($time2);
-                $tm = floor(($time1->diffInMinutes($time2) - (60 * $th)));
-                $totalhour = $th.".".$tm;
+                $time1 = date_create($timeIN); 
+                $time2 = date_create($timeOUT);
+                $diff = date_diff($time1,$time2);
+                $totaltime = $diff->format('%h.%i');
+
 
                 table::attendance()->where('idno', $idno)->where('date', $date)->whereNull('timeout')->update(array(
                     'timeout' => $timeOUT,
-                    'totalhours' => $totalhour,
+                    'totalhours' => $totaltime,
                     'status_timeout' => $status_out)
                 );
                 
