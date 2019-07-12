@@ -24,8 +24,9 @@ class AttendanceController extends Controller
         
         $data = table::attendance()->orderBy('date', 'desc')->get();
         $clock_comment = table::settings()->value('clock_comment');
+        $employee = table::people()->get();
         
-        return view('admin.attendance', compact('data', 'clock_comment'));
+        return view('admin.attendance', compact('data',  'clock_comment', 'employee'));
     }
     
     public function clock()
@@ -51,7 +52,72 @@ class AttendanceController extends Controller
 
         return redirect('attendance')->with('success', 'Deleted!');
     }
+    public function add (Request $request){
+        if (permission::permitted('attendance-add')=='fail') { return redirect()->route('denied'); }
+        $id = $request->id;
+        $idno = table::companydata()->where('reference', $id)->value('idno');
+        $timeIN = date("Y-m-d h:i:s A", strtotime($request->timein_date." ".$request->timein));
+        $timeOUT = date("Y-m-d h:i:s A", strtotime($request->timeout_date." ".$request->timeout));
 
+        if ($id == null || $idno == null || $timeIN == null || $timeOUT == NULL) {
+            return redirect('attendance')->with('error', 'Whoops! Please fill the form completely!');
+        }
+
+        $sched_in_time = table::schedules()->where([
+            ['idno', '=', $idno], 
+            ['archive', '=', '0'],
+        ])->value('intime');
+
+        if($sched_in_time == null){
+            $status_in = "Ok";
+        } else {
+            $sched_clock_in_time_24h = date("H.i", strtotime($sched_in_time));
+            $time_in_24h = date("H.i", strtotime($timeIN));
+            if ($time_in_24h <= $sched_clock_in_time_24h) {
+                $status_in = 'In Time';
+            } else {
+                $status_in = 'Late Arrival';
+            }
+        }
+
+        $sched_out_time = table::schedules()->where([
+            ['idno', '=', $idno], 
+            ['archive','=','0'],
+        ])->value('outime');
+        
+        if($sched_out_time == null) {
+            $status_out = "Ok";
+        } else {
+            $sched_clock_out_time_24h = date("H.i", strtotime($sched_out_time));
+            $time_out_24h = date("H.i", strtotime($timeOUT));
+            if($time_out_24h >= $sched_clock_out_time_24h) {
+                $status_out = 'On Time';
+            } else {
+                $status_out = 'Early Departure';
+            }
+        }
+
+        $time1 = date_create($timeIN); 
+        $time2 = date_create($timeOUT); 
+        $diff = date_diff($time1,$time2);
+        $totaltime = $diff->format('%h.%i');
+
+        table::attendance()->insert([
+            'idno' => $idno,
+            'reference' => $request->id,
+            'date' =>$request->timein_date,
+            'employee' => $request->employee,
+            'timein' => $timeIN,
+            'timeout' => $timeOUT,
+            'reason' => $request->reason, 
+            'totalhours' => $totaltime,
+            'status_timein' => $status_in,
+            'status_timeout' => $status_out,
+        ]);
+
+        return redirect('attendance')->with('success','Employee Attendance has been added!');
+
+    }
     public function update(Request $request)
     {
         if (permission::permitted('attendance-edit')=='fail') { return redirect()->route('denied'); }
@@ -62,7 +128,7 @@ class AttendanceController extends Controller
         $timeOUT = date("Y-m-d h:i:s A", strtotime($request->timeout_date." ".$request->timeout));
         $reason = $request->reason;
 
-        if ($id == null || $idno == null || $timeIN == null || $timeOUT == null) {
+        if ($id == null || $idno == null || $timeIN == null || $timeOUT == NULL) {
             return redirect('attendance')->with('error', 'Whoops! Please fill the form completely!');
         }
 

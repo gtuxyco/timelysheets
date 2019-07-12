@@ -73,6 +73,7 @@ Route::group(['middleware' => 'auth'], function () {
 			|--------------------------------------------------------------------------
 			*/
 			Route::get('attendance', 'admin\AttendanceController@index')->name('attendance');
+			Route::post('attendance/add', 'admin\AttendanceController@add');
 			Route::get('attendance/edit/{id}', 'admin\AttendanceController@edit');
 			Route::get('attendance/delete/{id}', 'admin\AttendanceController@delete');
 			Route::post('attendance/update', 'admin\AttendanceController@update');

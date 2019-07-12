@@ -25,6 +25,7 @@ Class permission {
         3 => 'attendance',
             31 => 'attendance-edit',
             32 => 'attendance-delete',
+            33 => 'attendance-add',
         4 => 'schedules',
             41 => 'schedules-add',
             42 => 'schedules-edit',

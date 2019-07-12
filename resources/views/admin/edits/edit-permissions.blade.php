@@ -88,6 +88,12 @@
                                                 <label>Delete Attendance</label>
                                             </div>
                                         </div>
+                                        <div class="item">
+                                            <div class="ui child checkbox slider">
+                                                <input type="checkbox" @isset($d) @if(in_array('33', $d)==true) checked @endif @endisset name="perms[]" value="33">
+                                                <label>Add Attendance</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 

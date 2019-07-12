@@ -134,7 +134,7 @@ $('#add_employee_form, #edit_employee_form').form({
     }
 });
 
-$('#edit_attendance_form').form({
+$('#edit_attendance_form', '#add_attendance_form').form({
     fields: {
         employee: {
             identifier: 'employee',

@@ -1,11 +1,24 @@
 @extends('layouts.default')
-    
+
+    @section('styles')
+    <link href="{{ asset('/assets/vendor/mdtimepicker/mdtimepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/vendor/air-datepicker/dist/css/datepicker.min.css') }}" rel="stylesheet">
+    <style>
+        .ui.active.modal {position: relative !important;}
+        .datepicker {z-index: 999 !important;}
+        .datepickers-container {z-index: 9999 !important;}
+    </style>
+    @endsection
+
     @section('content')
+    @include('admin.modals.modal-add-attendance')
 
     <div class="container-fluid">
         <div class="row">
             <h2 class="page-title">Attendance
                 <a href="{{ url('clock') }}" class="ui positive button mini offsettop5 float-right"><i class="ui icon clock"></i>Clock In/Out</a>
+                <button class="ui positive button mini offsettop5 btn-add float-right"><i class="ui icon plus"></i>Add</button>
+
             </h2>
         </div>  
 
@@ -106,10 +119,23 @@
     @endsection
 
     @section('scripts')
+    <script src="{{ asset('/assets/vendor/air-datepicker/dist/js/datepicker.min.js') }}"></script>
+    <script src="{{ asset('/assets/vendor/air-datepicker/dist/js/i18n/datepicker.en.js') }}"></script>
+    <script src="{{ asset('/assets/vendor/mdtimepicker/mdtimepicker.min.js') }}"></script>
+
     <script type="text/javascript">
     $(document).ready(function() {
         $('#dataTables-example').DataTable({responsive: true,pageLength: 15,lengthChange: false,searching: true,sorting: false,});
     });
-    </script> 
 
+    $('.jtimepicker').mdtimepicker({ format: 'h:mm:ss tt', hourPadding: true });
+    $('.airdatepicker').datepicker({ language: 'en', dateFormat: 'yyyy-mm-dd' });
+
+    $('.ui.dropdown.getid').dropdown({ onChange: function(value, text, $selectedItem) {
+        $('select[name="employee"] option').each(function() {
+            if($(this).val()==value) {var id = $(this).attr('data-id');$('input[name="id"]').val(id);};
+        });
+    }});
+
+    </script>
     @endsection
