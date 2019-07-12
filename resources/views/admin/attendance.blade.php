@@ -25,7 +25,7 @@
         <div class="row">
             <div class="box box-success">
                 <div class="box-body">
-                    <table width="100%" class="table table-striped table-hover" id="dataTables-example">
+                    <table width="100%" class="table table-striped table-hover" id="dataTables-example" data-order='[[ 4, "asc" ]]'>
                         <thead>
                             <tr>
                                 <th>ID #</th>

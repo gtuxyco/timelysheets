@@ -52,7 +52,8 @@ class AttendanceController extends Controller
 
         return redirect('attendance')->with('success', 'Deleted!');
     }
-    public function add (Request $request){
+    
+    public function add(Request $request){
         if (permission::permitted('attendance-add')=='fail') { return redirect()->route('denied'); }
         $id = $request->id;
         $idno = table::companydata()->where('reference', $id)->value('idno');

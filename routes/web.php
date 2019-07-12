@@ -25,7 +25,7 @@
 |--------------------------------------------------------------------------
 */
 Route::get('clock', 'ClockController@clock');
-Route::post('attendance/add', 'ClockController@add'); 
+Route::post('clock/add', 'ClockController@add'); 
 		
 Route::group(['middleware' => 'auth'], function () {
 

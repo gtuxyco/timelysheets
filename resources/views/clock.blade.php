@@ -133,7 +133,7 @@
         comment = $('textarea[name="comment"]').val();
 
         $.ajax({
-            url: url + '/attendance/add',type: 'post',dataType: 'json',data: {idno: idno, type: type, clock_comment: comment},headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') },
+            url: url + '/clock/add',type: 'post',dataType: 'json',data: {idno: idno, type: type, clock_comment: comment},headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') },
 
             success: function(response) {
                 if(response['error'] != null) {
